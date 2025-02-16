@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   root: resolve(__dirname, "src"), // Make sure this is an absolute path
@@ -15,4 +16,7 @@ export default defineConfig({
     port: 5173,
   },
   publicDir: resolve(__dirname, "assets"), // Use absolute path for public directory
+  plugins: [
+    tailwindcss(),
+  ],
 });
